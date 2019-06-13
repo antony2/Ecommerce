@@ -1,0 +1,49 @@
+<nav
+  class="navbar navbar-expand-lg justify-content-between navbar-dark bg-dark text-light"
+>
+  <a class="navbar-brand" [routerLink]="['/store/home']">E-Commerce</a>
+  <div class="navbar-nav pull-left">
+    <button class="btn btn-default" (click)="displayCart()">
+      <span class="text-dark">Shopping Cart</span>
+      <span class="badge badge-info" *ngIf="cart.products.length == 0"
+        >is empty</span
+      >
+      <span *ngIf="cart.products.length > 0">
+        <span class="badge badge-info">{{ cart.products.length }} items </span>
+        <span class="badge badge-success">{{ cart.total | currency }}</span>
+      </span>
+    </button>
+  </div>
+  <ul class="navbar-nav pull-right">
+    <li class="nav-item">
+      <button
+        class="btn btn-primary m-2"
+        [routerLink]="['/login']"
+        *ngIf="!getLoginInformation()"
+      >
+        Login
+      </button>
+      <button
+        class="btn btn-primary m-2"
+        [routerLink]="['/reg']"
+        *ngIf="!getLoginInformation()"
+      >
+        Logout
+      </button>
+      <button
+        class="btn btn-primary m-2"
+        *ngIf="getLoginInformation()"
+        (click)="m2()"
+      >
+        {{ getCurrentUserName }}
+      </button>
+      <button
+        class="btn btn-primary m-2"
+        *ngIf="getLoginInformation()"
+        (click)="m1()"
+      >
+        Logout
+      </button>
+    </li>
+  </ul>
+</nav>

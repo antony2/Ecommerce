@@ -1,0 +1,152 @@
+<appheader></appheader>
+<div class="row">
+  <div class="col-4">
+    <div id="card mt-5">
+      <div id="card-body" style="min-height: 500px">
+        <div class="list-group">
+          <img class="list-group-item" src="images/fig1.svg" />
+          <a
+            class="list-group-item list-group-item-action"
+            data-toggle="list"
+            data-target="#profile"
+            href="#profile"
+            >Profile</a
+          ><a
+            class="list-group-item list-group-item-action"
+            data-toggle="list"
+            data-target="#orders"
+            href="#orders"
+            >Orders</a
+          >
+          <a
+            class="list-group-item list-group-item-action"
+            data-toggle="list"
+            data-target="#wishlist"
+            href="#wishlist"
+            >Wishlist</a
+          >
+          <a
+            class="list-group-item list-group-item-action"
+            data-toggle="list"
+            data-target="#preferences"
+            href="#Preferenceses"
+            >Preferences</a
+          >
+          <a class="list-group-item list-group-item-action" href="logout()"
+            >Logout</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-8">
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div id="card mt-5">
+        <div id="card-body" style="min-width: 500px;">
+          <div class="tab-pane collapse show">
+            <h2>Welcome</h2>
+            <p>Here is your account information</p>
+          </div>
+          <div class="tab-pane collapse" id="profile">
+            <form>
+              <div class="form-group">
+                <label>User Name</label>
+                <input type="text" name="username" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Phone No</label>
+                <input type="tel" name="phonono" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Address</label>
+                <textarea name="address" class="form-control"></textarea>
+              </div>
+              <button class="btn btn-success" style="margin: 8px">
+                Save
+              </button>
+              <button class="btn btn-danger" style="margin: 8px">Cancel</button>
+            </form>
+          </div>
+          <div class="tab-pane collapse" id="orders">
+            <table class="table table-bordered">
+              <thead class="thead-dark">
+                <tr>
+                  <th>#id</th>
+                  <th>Order Data</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mobile</td>
+                  <td>Intransit</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Watch</td>
+                  <td>Cancelled</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Books</td>
+                  <td>Delivered</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Laptop</td>
+                  <td>Delivered</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Jeans</td>
+                  <td>Delivered</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tab-pane collapse" id="wishlist">
+            <table class="table table-bordered">
+              <thead class="thead-dark">
+                <tr>
+                  <th>#id</th>
+                  <th>Product Info</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Iphone 6s</td>
+                  <td>10/5/2018</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Fossil Watch</td>
+                  <td>10/5/2018</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tab-pane collapse" id="preferences">
+            <form>
+              <div class="form-group">
+                <label>SMS Preferences</label>
+                <select class="form-control"> </select>
+              </div>
+              <div class="form-group">
+                <label>Email Preferences</label>
+                <select class="form-control"> </select>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
